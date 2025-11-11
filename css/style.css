@@ -1,0 +1,6 @@
+body {
+  background: linear-gradient(180deg,#eef2f7,#ffffff);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.card { border-radius: 12px; }
+.container { padding-bottom: 50px; }
