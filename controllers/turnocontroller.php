@@ -60,7 +60,7 @@ class TurnoController {
     // Método para consultar un turno por código
     public function consultarTurno() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') { // Verifica POST
-            header("Location: index.php"); // Redirige a home
+            header("Location: index.php");
             exit;
         }
         $codigo = trim($_POST['codigo'] ?? ''); // Obtiene código del formulario

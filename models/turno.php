@@ -56,9 +56,9 @@ class Turno {
 
         $stmt = $this->conn->prepare("
             SELECT * FROM {$this->table}
-            WHERE usuario_id = ?        // Filtra por usuario
-              AND estado != 'cancelado' // Excluye turnos cancelados
-            ORDER BY fecha DESC, hora DESC // Ordena por fecha y hora descendente
+            WHERE usuario_id = ?
+              AND estado != 'cancelado'
+            ORDER BY fecha DESC, hora DESC
         ");
         $stmt->execute([$usuario_id]); // Ejecuta consulta
         return $stmt->fetchAll(PDO::FETCH_ASSOC); // Devuelve array de turnos
